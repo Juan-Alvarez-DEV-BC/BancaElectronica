@@ -4,16 +4,17 @@ import java.util.ArrayList;
 
 public class Cliente extends Persona{
     private int numero;
-    String rfc;
-    ArrayList<Cuenta> cuentas;
-    String telefono;
-    String fechaNacimiento;
+    private String rfc;
+    private ArrayList<Cuenta> cuentas;
+    private String telefono;
+    private String fechaNacimiento;
 
-    public Cliente(String nombre, String calle, int numero, String colonia, String estado, int codigoPostal, int edad, int numero1, String rfc, ArrayList<Cuenta> cuentas, String telefono, String fechaNacimiento) {
-        super(nombre, calle, numero, colonia, estado, codigoPostal, edad);
-        this.setNumero(numero1);
+    public Cliente(String nombre, String apellido,
+                   String calle, int numero, String colonia,  String estado,  int codigoPostal,
+                   int edad,     String rfc, String telefono, String fechaNacimiento) {
+        super(nombre, apellido, calle, numero, colonia, estado, codigoPostal, edad);
         this.rfc = rfc;
-        this.cuentas = cuentas;
+//        this.cuentas = cuentas;
         this.telefono = telefono;
         this.fechaNacimiento = fechaNacimiento;
     }

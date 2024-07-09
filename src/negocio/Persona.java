@@ -2,16 +2,17 @@ package negocio;
 
 public class Persona extends Object {
     private String nombre;
+    private String apellido;
     private Domicilio domicilio;
     private int edad;
 
-    public Persona(String nombre, Domicilio domicilio, int edad) {
+    public Persona(String nombre, String apellido, Domicilio domicilio, int edad) {
         this.setNombre(nombre);
         this.setDomicilio(domicilio);
         this.setEdad(edad);
     }
 
-    public Persona(String nombre, String calle, int numero, String colonia, String estado, int codigoPostal, int edad) {
+    public Persona(String nombre, String apellido,  String calle, int numero, String colonia, String estado, int codigoPostal, int edad) {
         this.setNombre(nombre);
         Domicilio elDomicilio =new Domicilio(calle, numero,colonia, estado,codigoPostal);
         this.setDomicilio(elDomicilio);
@@ -42,15 +43,23 @@ public class Persona extends Object {
         this.edad = edad;
     }
 
+
     @Override
     public String toString() {
         return "Persona{" +
-                "nombre='" + getNombre() + '\'' +
-                ", domicilio='" + getDomicilio() + '\'' +
-                ", edad=" + getEdad() +
+                "nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", domicilio=" + domicilio +
+                ", edad=" + edad +
                 '}';
     }
 
+    public String getApellido() {
+        return apellido;
+    }
 
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
 
 }
